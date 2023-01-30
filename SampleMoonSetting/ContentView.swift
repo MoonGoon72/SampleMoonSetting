@@ -29,17 +29,21 @@ struct ContentView: View {
                              backgroundColor: .blue,
                              foregroundColor: .white,
                              navigationTitle: "Wi-Fi",
-                             text: "IPTIME")
+                             text: "IPTIME") {
+                        Text("Wi-Fi 화면")
+                    }
                     textCell(imageName: "water.waves",
                              backgroundColor: .blue,
                              foregroundColor: .white,
                              navigationTitle: "Bluetooth",
-                             text: "켬")
+                             text: "켬") {
+                        Text("Bluetooth 화면")
+                    }
                     planeCell(imageName: "antenna.radiowaves.left.and.right",
                               backgroundColor: .green,
                               foregroundColor: .white,
                               navigationTitle: "셀룰러",
-                              destination: {Text("셀룰러 화면")})  // trailing closure?
+                              destination: {Text("셀룰러 화면")})
                     planeCell(imageName: "personalhotspot",
                               backgroundColor: .green,
                               foregroundColor: .white,
@@ -50,7 +54,9 @@ struct ContentView: View {
                              backgroundColor: .blue,
                              foregroundColor: .white,
                              navigationTitle: "VPN",
-                             text: "연결됨")
+                             text: "연결됨") {
+                        Text("VPN 화면")
+                    }
                 }
                 Section {
                     planeCell(imageName: "bell.badge.fill",
@@ -80,115 +86,58 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    HStack {
-                        Image(systemName: "gear")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.gray)
-                            .foregroundColor(.white)
-                            .cornerRadius(6)
-                        NavigationLink("일반") {
-                            Text("일반 화면")
-                        }
+                    planeCell(imageName: "gear",
+                              backgroundColor: .gray,
+                              foregroundColor: .white,
+                              navigationTitle: "일반") {
+                        Text("일반 화면")
                     }
-                    HStack {
-                        Image(systemName: "figure.walk.circle")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(6)
-                        NavigationLink("손쉬운 사용") {
-                            Text("손쉬운 사용 화면")
-                        }
+                    planeCell(imageName: "figure.walk.circle",
+                              backgroundColor: .blue,
+                              foregroundColor: .white,
+                              navigationTitle: "손쉬운 사용") {
+                        Text("손쉬운 사용 화면")
                     }
-                    HStack {
-                        Image(systemName: "hand.raised.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(6)
-                        NavigationLink("개인정보 보호 및 보안") {
-                            Text("개인정보 보호 및 보안 화면")
-                        }
+                    planeCell(imageName: "hand.raised.fill",
+                              backgroundColor: .blue,
+                              foregroundColor: .white,
+                              navigationTitle: "개인 정보 보호 및 보안") {
+                        Text("개인 정보 보호 및 보안 화면")
+                    }
+                }
+                Section {
+                    planeCell(imageName: "key.fill",
+                              backgroundColor: .gray,
+                              foregroundColor: .white,
+                              navigationTitle: "암호") {
+                        Text("암호 화면")
                     }
                 }
                 
                 Section {
-                    HStack {
-                        Image(systemName: "key.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.gray)
-                            .foregroundColor(.white)
-                            .cornerRadius(6)
-                        NavigationLink("암호") {
-                            Text("암호 화면")
-                        }
+                    planeCell(imageName: "safari",
+                              backgroundColor: .blue,
+                              foregroundColor: .white,
+                              navigationTitle: "Safari") {
+                        Text("사파리 화면")
                     }
-                }
-                
-                Section {
-                    HStack {
-                        Image(systemName: "safari")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(6)
-                        NavigationLink("Safari") {
-                            Text("Safari 화면")
-                        }
+                    planeCell(imageName: "newspaper",
+                              backgroundColor: .white,
+                              foregroundColor: .red,
+                              navigationTitle: "News") {
+                        Text("News 화면")
                     }
-                    HStack {
-                        Image(systemName: "newspaper")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.white)
-                            .foregroundColor(.red)
-                            .cornerRadius(6)
-                        NavigationLink("News") {
-                            Text("News 화면")
-                        }
+                    planeCell(imageName: "globe",
+                              backgroundColor: .black,
+                              foregroundColor: .mint,
+                              navigationTitle: "번역") {
+                        Text("번역")
                     }
-                    HStack {
-                        Image(systemName: "globe")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.black)
-                            .foregroundColor(.mint)
-                            .cornerRadius(6)
-                        NavigationLink("번역") {
-                            Text("번역 화면")
-                        }
-                    }
-                    HStack {
-                        Image(systemName: "map")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20, height: 20)
-                            .padding(.all, 4)
-                            .background(.blue)
-                            .foregroundColor(.green)
-                            .cornerRadius(6)
-                        NavigationLink("지도") {
-                            Text("지도 화면")
-                        }
+                    planeCell(imageName: "map",
+                              backgroundColor: .blue,
+                              foregroundColor: .green,
+                              navigationTitle: "지도") {
+                        Text("지도 화면")
                     }
                 }
             }
@@ -248,21 +197,19 @@ struct ContentView: View {
             }
         }
     }
-    @ViewBuilder private func cellulerPlaneCell() -> some View {
-        HStack {
-            Image(systemName: "antenna.radiowaves.left.and.right")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 20, height: 20)
-                .padding(.all, 4)
-                .background(.green)
-                .foregroundColor(.white)
-                .cornerRadius(6)
-            NavigationLink("셀룰러") {
-                Text("셀룰러 화면")
-            }
-        }
-    }
+//    @ViewBuilder private func toggleCell<V: View>(imageName: String, backgroundColor: Color, foregroundColor: Color, whatIsOn: Bool, toggleName: String ,destination: @escaping () -> V) -> some View {
+//        HStack {
+//            Image(systemName: imageName)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 20, height: 20)
+//                .padding(.all, 4)
+//                .background(backgroundColor)
+//                .foregroundColor(foregroundColor)
+//                .cornerRadius(6)
+//            Toggle(toggleName ,isOn: whatIsOn)
+//        }
+//    }
     @ViewBuilder private func planeCell<V: View>(imageName: String, backgroundColor: Color, foregroundColor: Color, navigationTitle: String, destination: @escaping () -> V) -> some View {
         HStack {
             Image(systemName: imageName)
@@ -278,7 +225,7 @@ struct ContentView: View {
             }
         }
     }
-    @ViewBuilder private func textCell(imageName: String, backgroundColor: Color, foregroundColor: Color, navigationTitle: String, text: String) -> some View {
+    @ViewBuilder private func textCell<V: View>(imageName: String, backgroundColor: Color, foregroundColor: Color, navigationTitle: String, text: String, destination: @escaping () -> V) -> some View {
         HStack {
             Image(systemName: imageName)
                 .resizable()
@@ -288,7 +235,7 @@ struct ContentView: View {
                 .background(backgroundColor)
                 .foregroundColor(foregroundColor)
                 .cornerRadius(6)
-            NavigationLink(destination: Text(navigationTitle + " 화면")) {
+            NavigationLink(destination: destination) {
                 HStack {
                     Text(navigationTitle)
                     Spacer()
