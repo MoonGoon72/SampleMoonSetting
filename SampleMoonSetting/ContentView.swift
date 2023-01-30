@@ -18,35 +18,35 @@ struct ContentView: View {
                 .padding(.vertical, 2)
                 Section {
                     airplaneToggleCell()
-                    planeCell(imageName: "wifi",
+                    navigationLinkCell(imageName: "wifi",
                              backgroundColor: .blue,
                              foregroundColor: .white,
                              navigationTitle: "Wi-Fi",
                              text: "IPTIME") {
                         Text("Wi-Fi 화면")
                     }
-                    planeCell(imageName: "water.waves",
+                    navigationLinkCell(imageName: "water.waves",
                              backgroundColor: .blue,
                              foregroundColor: .white,
                              navigationTitle: "Bluetooth",
                              text: "켬") {
                         Text("Bluetooth 화면")
                     }
-                    planeCell(imageName: "antenna.radiowaves.left.and.right",
+                    navigationLinkCell(imageName: "antenna.radiowaves.left.and.right",
                               backgroundColor: .green,
                               foregroundColor: .white,
                               navigationTitle: "셀룰러",
                               text: nil) {
                         Text("셀룰러 화면")
                     }
-                    planeCell(imageName: "personalhotspot",
+                    navigationLinkCell(imageName: "personalhotspot",
                               backgroundColor: .green,
                               foregroundColor: .white,
                               navigationTitle: "개인용 핫스팟",
                               text: nil) {
                         Text("핫스팟 화면")
                     }
-                    planeCell(imageName: "v.square.fill",
+                    navigationLinkCell(imageName: "v.square.fill",
                              backgroundColor: .blue,
                              foregroundColor: .white,
                              navigationTitle: "VPN",
@@ -55,25 +55,25 @@ struct ContentView: View {
                     }
                 }
                 Section {
-                    planeCell(imageName: "bell.badge.fill",
+                    navigationLinkCell(imageName: "bell.badge.fill",
                               backgroundColor: .red,
                               foregroundColor: .white,
                               navigationTitle: "알림") {
                         Text("알림 화면")
                     }
-                    planeCell(imageName: "speaker.wave.2.fill",
+                    navigationLinkCell(imageName: "speaker.wave.2.fill",
                               backgroundColor: .red,
                               foregroundColor: .white,
                               navigationTitle: "사운드 및 햅틱") {
                         Text("사운드 및 햅틱 화면")
                     }
-                    planeCell(imageName: "moon.fill",
+                    navigationLinkCell(imageName: "moon.fill",
                               backgroundColor: .indigo,
                               foregroundColor: .white,
                               navigationTitle: "집중 모드") {
                         Text("집중 모드 화면")
                     }
-                    planeCell(imageName: "hourglass",
+                    navigationLinkCell(imageName: "hourglass",
                               backgroundColor: .indigo,
                               foregroundColor: .white,
                               navigationTitle: "스크린 타임") {
@@ -82,19 +82,19 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    planeCell(imageName: "gear",
+                    navigationLinkCell(imageName: "gear",
                               backgroundColor: .gray,
                               foregroundColor: .white,
                               navigationTitle: "일반") {
                         Text("일반 화면")
                     }
-                    planeCell(imageName: "figure.walk.circle",
+                    navigationLinkCell(imageName: "figure.walk.circle",
                               backgroundColor: .blue,
                               foregroundColor: .white,
                               navigationTitle: "손쉬운 사용") {
                         Text("손쉬운 사용 화면")
                     }
-                    planeCell(imageName: "hand.raised.fill",
+                    navigationLinkCell(imageName: "hand.raised.fill",
                               backgroundColor: .blue,
                               foregroundColor: .white,
                               navigationTitle: "개인 정보 보호 및 보안") {
@@ -102,7 +102,7 @@ struct ContentView: View {
                     }
                 }
                 Section {
-                    planeCell(imageName: "key.fill",
+                    navigationLinkCell(imageName: "key.fill",
                               backgroundColor: .gray,
                               foregroundColor: .white,
                               navigationTitle: "암호") {
@@ -111,25 +111,25 @@ struct ContentView: View {
                 }
                 
                 Section {
-                    planeCell(imageName: "safari",
+                    navigationLinkCell(imageName: "safari",
                               backgroundColor: .blue,
                               foregroundColor: .white,
                               navigationTitle: "Safari") {
                         Text("사파리 화면")
                     }
-                    planeCell(imageName: "newspaper",
+                    navigationLinkCell(imageName: "newspaper",
                               backgroundColor: .white,
                               foregroundColor: .red,
                               navigationTitle: "News") {
                         Text("News 화면")
                     }
-                    planeCell(imageName: "globe",
+                    navigationLinkCell(imageName: "globe",
                               backgroundColor: .black,
                               foregroundColor: .mint,
                               navigationTitle: "번역") {
                         Text("번역")
                     }
-                    planeCell(imageName: "map",
+                    navigationLinkCell(imageName: "map",
                               backgroundColor: .blue,
                               foregroundColor: .green,
                               navigationTitle: "지도") {
@@ -194,7 +194,7 @@ struct ContentView: View {
         }
     }
 
-    @ViewBuilder private func planeCell<V: View>(imageName: String,
+    @ViewBuilder private func navigationLinkCell<V: View>(imageName: String,
                                                  backgroundColor: Color,
                                                  foregroundColor: Color,
                                                  navigationTitle: String,
