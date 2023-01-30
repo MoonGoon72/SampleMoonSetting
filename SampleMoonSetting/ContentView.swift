@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  SampleMoonSetting
-//
-//  Created by cnu on 2023/01/27.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -200,34 +193,7 @@ struct ContentView: View {
             }
         }
     }
-//    @ViewBuilder private func toggleCell<V: View>(imageName: String, backgroundColor: Color, foregroundColor: Color, whatIsOn: Bool, toggleName: String ,destination: @escaping () -> V) -> some View {
-//        HStack {
-//            Image(systemName: imageName)
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .frame(width: 20, height: 20)
-//                .padding(.all, 4)
-//                .background(backgroundColor)
-//                .foregroundColor(foregroundColor)
-//                .cornerRadius(6)
-//            Toggle(toggleName ,isOn: whatIsOn)
-//        }
-//    }
-//    @ViewBuilder private func planeCell<V: View>(imageName: String, backgroundColor: Color, foregroundColor: Color, navigationTitle: String, destination: @escaping () -> V) -> some View {
-//        HStack {
-//            Image(systemName: imageName)
-//                .resizable()
-//                .aspectRatio(contentMode: .fit)
-//                .frame(width: 20, height: 20)
-//                .padding(.all, 4)
-//                .background(backgroundColor)
-//                .foregroundColor(foregroundColor)
-//                .cornerRadius(6)
-//            NavigationLink(navigationTitle) {
-//                destination()  // 값의 반환 위함
-//            }
-//        }
-//    }
+
     @ViewBuilder private func planeCell<V: View>(imageName: String, backgroundColor: Color, foregroundColor: Color, navigationTitle: String, text: String?, destination: @escaping () -> V) -> some View {
         HStack {
             Image(systemName: imageName)
