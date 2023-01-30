@@ -58,25 +58,25 @@ struct ContentView: View {
                     planeCell(imageName: "bell.badge.fill",
                               backgroundColor: .red,
                               foregroundColor: .white,
-                              navigationTitle: "알림", text: nil) {
+                              navigationTitle: "알림") {
                         Text("알림 화면")
                     }
                     planeCell(imageName: "speaker.wave.2.fill",
                               backgroundColor: .red,
                               foregroundColor: .white,
-                              navigationTitle: "사운드 및 햅틱", text: nil) {
+                              navigationTitle: "사운드 및 햅틱") {
                         Text("사운드 및 햅틱 화면")
                     }
                     planeCell(imageName: "moon.fill",
                               backgroundColor: .indigo,
                               foregroundColor: .white,
-                              navigationTitle: "집중 모드", text: nil) {
+                              navigationTitle: "집중 모드") {
                         Text("집중 모드 화면")
                     }
                     planeCell(imageName: "hourglass",
                               backgroundColor: .indigo,
                               foregroundColor: .white,
-                              navigationTitle: "스크린 타임", text: nil) {
+                              navigationTitle: "스크린 타임") {
                         Text("스크린 타임 화면")
                     }
                 }
@@ -85,19 +85,19 @@ struct ContentView: View {
                     planeCell(imageName: "gear",
                               backgroundColor: .gray,
                               foregroundColor: .white,
-                              navigationTitle: "일반", text: nil) {
+                              navigationTitle: "일반") {
                         Text("일반 화면")
                     }
                     planeCell(imageName: "figure.walk.circle",
                               backgroundColor: .blue,
                               foregroundColor: .white,
-                              navigationTitle: "손쉬운 사용", text: nil) {
+                              navigationTitle: "손쉬운 사용") {
                         Text("손쉬운 사용 화면")
                     }
                     planeCell(imageName: "hand.raised.fill",
                               backgroundColor: .blue,
                               foregroundColor: .white,
-                              navigationTitle: "개인 정보 보호 및 보안", text: nil) {
+                              navigationTitle: "개인 정보 보호 및 보안") {
                         Text("개인 정보 보호 및 보안 화면")
                     }
                 }
@@ -105,7 +105,7 @@ struct ContentView: View {
                     planeCell(imageName: "key.fill",
                               backgroundColor: .gray,
                               foregroundColor: .white,
-                              navigationTitle: "암호", text: nil) {
+                              navigationTitle: "암호") {
                         Text("암호 화면")
                     }
                 }
@@ -114,25 +114,25 @@ struct ContentView: View {
                     planeCell(imageName: "safari",
                               backgroundColor: .blue,
                               foregroundColor: .white,
-                              navigationTitle: "Safari", text: nil) {
+                              navigationTitle: "Safari") {
                         Text("사파리 화면")
                     }
                     planeCell(imageName: "newspaper",
                               backgroundColor: .white,
                               foregroundColor: .red,
-                              navigationTitle: "News", text: nil) {
+                              navigationTitle: "News") {
                         Text("News 화면")
                     }
                     planeCell(imageName: "globe",
                               backgroundColor: .black,
                               foregroundColor: .mint,
-                              navigationTitle: "번역", text: nil) {
+                              navigationTitle: "번역") {
                         Text("번역")
                     }
                     planeCell(imageName: "map",
                               backgroundColor: .blue,
                               foregroundColor: .green,
-                              navigationTitle: "지도", text: nil) {
+                              navigationTitle: "지도") {
                         Text("지도 화면")
                     }
                 }
@@ -194,7 +194,12 @@ struct ContentView: View {
         }
     }
 
-    @ViewBuilder private func planeCell<V: View>(imageName: String, backgroundColor: Color, foregroundColor: Color, navigationTitle: String, text: String?, destination: @escaping () -> V) -> some View {
+    @ViewBuilder private func planeCell<V: View>(imageName: String,
+                                                 backgroundColor: Color,
+                                                 foregroundColor: Color,
+                                                 navigationTitle: String,
+                                                 text: String? = nil,
+                                                 destination: @escaping () -> V) -> some View {
         HStack {
             Image(systemName: imageName)
                 .resizable()
